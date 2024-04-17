@@ -6,16 +6,20 @@ public abstract class  Shape {
 	protected long id;
 	public abstract int square();
 	public abstract int perimeter();
+	
 	public Shape(long id) {
 		this.id = id;
 	}
+	
 	public long getId() {
 		return id;
 	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -26,7 +30,5 @@ public abstract class  Shape {
 			return false;
 		Shape other = (Shape) obj;
 		return id == other.id;
-	}
-	
-	
+	}	
 }

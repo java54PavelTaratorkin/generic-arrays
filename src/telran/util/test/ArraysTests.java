@@ -26,6 +26,7 @@ String[] stringsMin = {"abc", "lmn", "123",  "y"};
 		assertEquals("y", Arrays.min(stringsMin,
 				compLength));
 		assertEquals("123", Arrays.min(stringsMin, (s1, s2) -> s1.compareTo(s2)));
+		assertEquals(100, Arrays.min(numbers, (n1, n2) -> n2.compareTo(n1)));
 	}
 	@Test
 	void bubbleSortTest() {
